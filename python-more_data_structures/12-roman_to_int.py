@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    """Converts a roman numeral to an integer."""
     if (not isinstance(roman_string, str) or
             roman_string is None):
         return (0)
@@ -24,12 +23,6 @@ def roman_to_int(roman_string):
                 roman_dict[roman_string[i]] < roman_dict[roman_string[i + 1]]):
                 num += roman_dict[roman_string[i]] * -1
 
-    i = 0
-    num = 0
-    while i < len(roman_string):
-        if i+1<len(roman_string) and roman_string[i:i+2] in roman:
-            num+=roman[roman_string[i:i+2]]
-            i+=2
         else:
             num += roman_dict[roman_string[i]]
     return (num)
