@@ -1,22 +1,17 @@
 #!/usr/bin/python3
-"""Defines a class"""
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+"""Defines a Rectangle subclass Square."""
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Rectangle(BaseGeometry):
-    """ Class that defines a rectangle from BaseGeometry Class """
+class Square(Rectangle):
+    """Represent a square."""
 
-    def __init__(self, width, height):
-        """ Initializes instance """
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
+    def __init__(self, size):
+        """Initialize a new square.
 
-    def area(self):
-        """ Method that returns the area of the instance"""
-        return self.__width * self.__height
-
-    def __str__(self):
-        """ Special method that returns the printable string """
-        return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
+        Args:
+            size (int): The size of the new square.
+        """
+        self.integer_validator("size", size)
+        super().__init__(size, size)
+        self.__size = size
