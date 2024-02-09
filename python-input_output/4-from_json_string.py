@@ -5,13 +5,13 @@
 import json
 
 def from_json_string(my_str):
-    """ Function that returns the JSON representation of an object
+    """ Function that returns an object by a JSON representation
 
     Args:
-        my_obj: object
+        my_str: JSON representation
 
     Raises:
-        Exception: when the object can't be encoded
+        Exception: when the string can't be decoded
 
     """
     return json.loads(my_str)
