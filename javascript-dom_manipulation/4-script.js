@@ -5,4 +5,3 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelector('ul.my_list').appendChild(newItem);
     });
   });
-  
